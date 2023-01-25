@@ -1,4 +1,4 @@
-# USN_uSmartcar
+# USN µSmartcar
 
 
 USN Micro Smartcar – tekniske krav og funksjoner  <br>
