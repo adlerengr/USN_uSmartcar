@@ -28,4 +28,4 @@ time.sleep(2.5)
 motor_speed.duty_u16(motor_100)
 
 time.sleep(2.5)
-motor_speed.duty_u16(duty_off)
+motor_speed.duty_u16(motor_0)
