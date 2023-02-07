@@ -18,16 +18,16 @@ motor_100 = 65534				#Motor power, 100%.
 
 motor_speed.duty_u16(motor_25)
 
-time.sleep(1)
+time.sleep(2.5)
 motor_speed.duty_u16(motor_50)
 
-time.sleep(1)
+time.sleep(2.5)
 motor_speed.duty_u16(motor_75)
 
-time.sleep(1)
+time.sleep(2.5)
 motor_speed.duty_u16(motor_100)
 
-time.sleep(1)
+time.sleep(2.5)
 motor_speed.duty_u16(motor_0)
 
 pwm = PWM(Pin(1))

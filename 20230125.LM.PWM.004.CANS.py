@@ -74,20 +74,29 @@ motor_tf_b.value (0);
 duty_off=0
 duty_low=25000
 duty_high=65000
-motor_speed.duty_u16(duty_low)
+motor_0 = 0						#Motor power, 0%.
+motor_25 = 15000				#Motor power, aprox. 25%.
+motor_50 = 30000				#Motor power, aprox. 50%.
+motor_75 = 45000				#Motor power, aprox. 75%.
+motor_100 = 65534				#Motor power, 100%.
 
 
 
-motor_tf_a.value(1)
-motor_tf_b.value(0)
+
+#motor_tf_a.value(1)
+#motor_tf_b.value(0)
 
 #motor_tf_pwm.duty_u16(motor_25) #All engines forward, 25%.
+motor_speed.duty_u16(motor_25)
 
 time.sleep(2.5)
-motor_speed.duty_u16(duty_off)
+motor_speed.duty_u16(motor_50)
 
 time.sleep(2.5)
-motor_speed.duty_u16(duty_high)
+motor_speed.duty_u16(motor_75)
+
+time.sleep(2.5)
+motor_speed.duty_u16(motor_100)
 
 time.sleep(2.5)
 motor_speed.duty_u16(duty_off)

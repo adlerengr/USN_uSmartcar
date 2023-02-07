@@ -39,7 +39,7 @@ motor_fr_pwm.duty_u16(motor_25)
 motor_rl_pwm.duty_u16(motor_25)
 motor_rr_pwm.duty_u16(motor_25)
 
-wait(5) 						#5 second delay.
+time.sleep(5) 						#5 second delay.
 
 motor_fl_pwm.duty_u16(motor_0) 	#All motors to 0%.
 motor_fr_pwm.duty_u16(motor_0)
@@ -50,17 +50,17 @@ motor_rr_pwm.duty_u16(motor_0)
 motor_fr_pwm.duty_u16(motor_25)	#Right side motors to 25%.
 motor_rr_pwm.duty_u16(motor_25)
 
-wait(2.5) 						#2.5 second delay.
+time.sleep(2.5) 						#2.5 second delay.
 
 motor_fr_pwm.duty_u16(motor_0)	#Right side motors to 0%.
 motor_rr_pwm.duty_u16(motor_0)
 
-wait(2.5)						#2.5 second delay.
+time.sleep(2.5)						#2.5 second delay.
 
 motor_fl_pwm.duty_u16(motor_25)	#Left side motors to 25%
 motor_rl_pwm.duty_u16(motor_25)
 
-wait(2.5) 						#2.5 second delay
+time.sleep(2.5) 						#2.5 second delay
 
 motor_fl_pwm.duty_u16(motor_0)	#Left side motors to 0%
 motor_rl_pwm.duty_u16(motor_0)
