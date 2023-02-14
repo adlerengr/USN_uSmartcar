@@ -34,9 +34,9 @@ pwm = PWM(Pin(1))
 pwm.freq(50)
 
 while True:
-    for position in range(1000,9000,500):
+    for position in range(1000,9000,100):
         pwm.duty_u16(position)
         time.sleep(0.01)
-    for position in range(9000,1000,-500):
+    for position in range(9000,1000,-100):
         pwm.duty_u16(position)
         time.sleep(0.01)
