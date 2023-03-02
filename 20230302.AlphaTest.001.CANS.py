@@ -21,12 +21,6 @@ motor_50 = 30000				#Motor power, aprox. 50%.
 motor_75 = 45000				#Motor power, aprox. 75%.
 motor_100 = 65534				#Motor power, 100%.
 
-
-time.sleep(5)
-motor_speed_a.duty_u16(motor_100)
-motor_speed_b.duty_u16(motor_100)
-time.sleep(3)
-
 def set_servo_angle(angle):
     if angle == -45:
         pulse_width = 1000
@@ -43,33 +37,6 @@ def set_servo_angle(angle):
     except Exception as e:
         print("Error setting servo angle:", e)
 
-# Set servo to -45 degrees
-motor_speed_a.duty_u16(motor_50)
-motor_speed_b.duty_u16(motor_50)
-set_servo_angle(-45)
-time.sleep(1)
-
-# Set servo to 0 degrees
-motor_speed_a.duty_u16(motor_100)
-motor_speed_b.duty_u16(motor_100)
-set_servo_angle(0)
-time.sleep(1)
-
-# Set servo to 45 degrees
-motor_speed_a.duty_u16(motor_50)
-motor_speed_b.duty_u16(motor_50)
-set_servo_angle(45)
-time.sleep(1)
-
-# Set servo to 0 degrees
-motor_speed_a.duty_u16(motor_100)
-motor_speed_b.duty_u16(motor_100)
-set_servo_angle(0)
-time.sleep(1)
-
-
-motor_speed_a.duty_u16(motor_0)
-motor_speed_b.duty_u16(motor_0)
 
 # create an I2C object for communicating with the sensors
 i2c = I2C(1, scl=Pin(5), sda=Pin(4), freq=100000)
